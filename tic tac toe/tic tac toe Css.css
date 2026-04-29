@@ -17,6 +17,8 @@ hr {
     color: white;
     border: 2px solid gold;
     border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3,1fr) / repeat(3,1fr)
 
 }
 
