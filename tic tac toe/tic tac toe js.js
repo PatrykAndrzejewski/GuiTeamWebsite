@@ -22,13 +22,14 @@ const winningConditions = [
 function handleCellClick(event) {
     const clickedCell = event.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index')); 
-}
+
 if (board[clickedCellIndex] !== '' || !gameActive) {
     return;
-}
+
 
 board[clickedCellIndex] = currentPlayer;
 clickedCell.textContent = currentPlayer;
+}
 
 function checkResult() {
     let roundWon = false;
