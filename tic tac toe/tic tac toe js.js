@@ -54,4 +54,12 @@ function checkResult() {
     } else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     }
+
+    function restartGame() {
+        board = ['', '', '', '', '', '', '', '', ''];
+        currentPlayer = 'X';
+        gameActive = true;
+        gameStatus.textContent = "Player X's turn";
+    }
+    
 }
