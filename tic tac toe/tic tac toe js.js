@@ -1,20 +1,9 @@
-let playerO = "O";
-let playerX = "X";
-let curentPlayer = playerO;
-//               0  1  2  3  4  5  6  7  8
-let gameBoard = ["","","","","","","","",""];
-let gameCells;
+//grab elements from the DOM
+const gameBoard = document.getElementById('game-board');
+const cells = document.querySelectorAll('.cell');
+const gameStatus = document.getElementById('game-status');
+const restartButton = document.getElementById('restart-button');
 
-window.onload = function() {
-    gameCells = document.getElementsByClassName("game-cell");
-    for (let celll of gameCells)    {
-        celll.addEventListener("click", placeCell);
-    }
-}
-
-function placeCell() {
-
-    this.innerText = curentPlayer;
-
-    curentPlayer = (curentPlayer == playerO) ? playerX : playerO;
-}
+let board = ['', '', '', '', '', '', '', '', ''];
+let currentPlayer = 'X';
+let gameActive = true;
