@@ -27,3 +27,6 @@ function handleCellClick(event) {
 if (board[clickedCellIndex] !== '' || !gameActive) {
     return;
 }
+
+board[clickedCellIndex] = currentPlayer;
+clickedCell.textContent = currentPlayer;
