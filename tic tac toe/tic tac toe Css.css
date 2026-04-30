@@ -6,7 +6,7 @@ body{
 hr {
     width: 200px;
     height: 2px;
-    background-color: gold;
+    background-color: lightgrey;
 }
 #GameBoard{
     width: 450px;
@@ -15,7 +15,7 @@ hr {
 
     background-color: grey;
     color: white;
-    border: 2px solid gold;
+    border: 2px solid lightgrey;
     border-radius: 10px;
     display: grid;
     grid-template: repeat(3,1fr) / repeat(3,1fr)
@@ -31,10 +31,15 @@ hr {
 {
     height: 50px;
     width: 150px;
-    border: 5px solid gold;
+    border: 5px solid lightgrey;
     border-radius: 5px;
     background-color: gray;
     color: white;
     font-size: 20px;
+    margin-top: 30px;
 
+}
+.winning-game-cell{
+    background-color: lightgoldenrodyellow;
+    color: black;
 }
