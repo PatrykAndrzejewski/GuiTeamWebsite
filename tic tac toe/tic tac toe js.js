@@ -1,4 +1,3 @@
-//grab elements from the DOM
 const gameBoard = document.getElementById('game-board');
 const cells = document.querySelectorAll('.cell');
 const gameStatus = document.getElementById('game-status');
@@ -61,5 +60,5 @@ function checkResult() {
         gameActive = true;
         gameStatus.textContent = "Player X's turn";
     }
-    
+
 }
