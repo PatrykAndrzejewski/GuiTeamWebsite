@@ -28,6 +28,16 @@ background-color: aqua;
 color: #222;
 font-weight: bold;
 font-size: 1rem;
+text-align: center;
+padding: 16px;
+border-radius: 8px;
+box-shadow: 8px;
+cursor: pointer;
+text-decoration: none;
+display: block;
+}
 
+.game-card:hover{
+background-color: aquamarine;
 
 }
