@@ -19,3 +19,11 @@ const winningConditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
+function handleCellClick(event) {
+    const clickedCell = event.target;
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index')); 
+}
+if (board[clickedCellIndex] !== '' || !gameActive) {
+    return;
+}
