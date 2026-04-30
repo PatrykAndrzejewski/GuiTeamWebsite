@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: serif;
+    background-color: darkslategrey;
+    padding: 16px;
+}
+
+h1{
+    font-size: 2rem;
+    font font-weight: bold;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.game-list { 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.game-card{
+background-color: aqua;
+color: #222;
+font-weight: bold;
+font-size: 1rem;
+
+
+}
