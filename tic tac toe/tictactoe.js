@@ -1,5 +1,5 @@
 const gameBoard = document.getElementById('game-board');
-const cells = document.querySelectorAll('.`game-cell');
+const cells = document.querySelectorAll('.game-cell');
 const gameStatus = document.getElementById('game-status');
 const restartButton = document.getElementById('game-restart');
 
