@@ -30,3 +30,28 @@ if (board[clickedCellIndex] !== '' || !gameActive) {
 
 board[clickedCellIndex] = currentPlayer;
 clickedCell.textContent = currentPlayer;
+
+function checkResult() {
+    let roundWon = false;
+    for (let i = 0; i < winningConditions.length; i++) {
+        const winCondition = winningConditions[i];
+        let a = board[winCondition[0]];
+        let b = board[winCondition[1]];
+        let c = board[winCondition[2]];
+        if (a === '' || b === '' || c === '') {
+            continue;
+        }
+        if (a === b && b === c) {
+            roundWon = true;
+            break;
+        }
+    }
+    if (roundWon) {
+        gameStatus.textContent = `Player ${currentPlayer} wins!`;
+        gameActive = false;
+    } else if (!board.includes('')) {
+        gameStatus.textContent = "It's a draw!";
+    } else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    }
+}
