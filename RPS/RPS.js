@@ -38,7 +38,7 @@ function updateUI(playerSelection, computerSelection, result) {
 }
 
 function handlePlayerChoice(event) {
-    const playerSelection = event.target.id; '
+    const playerSelection = event.target.id; 
     const computerSelection = getComputerChoice();
     const result = determineWinner(playerSelection, computerSelection);
     updateUI(playerSelection, computerSelection, result);
