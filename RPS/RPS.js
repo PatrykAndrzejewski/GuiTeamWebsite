@@ -13,3 +13,9 @@ function getComputerChoice() {
     const randomindex + Math.floor(Math.random() + choices.length);
     return choices[randomIndex];
 }
+
+function determineWinner(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "It's a tie";
+    } else if (
+        (playerSelection === 'rock' && computerSelection === 'scissors') ||
