@@ -76,7 +76,7 @@ background-color: aquamarine;
 }
 h1{
    text-align: center;
-   color: #222;
+   color: white;
 
 }
   
@@ -85,7 +85,7 @@ h1{
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #222;
+    color: white;
 }
 
 #game-restart
