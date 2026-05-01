@@ -2,15 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!--Links to the main stylesheet-->
         <link rel="stylesheet" href="../Css/stylesheet.css">
         <title>TikTakToe</title>
     </head>
     <body>
+        <!--Adds a class to the H1 tag that is used in css-->
         <h1 class = "title">Tic Tac Toe</h1>
         <hr>
         <br>
+        <!--shows whos' turn it is in the tictactoe using the div that is used in js-->
         <div id="game-status">Player X's turn</div>
         <div id="game-board">
+            <!--Diffrent Cells for the tictactoe to be set in and asighned a class to eah one and an index which is later used in js to run the game-->
             <div data-cell-index="0" class="game-cell"></div>
             <div data-cell-index="1" class="game-cell"></div>
             <div data-cell-index="2" class="game-cell"></div>
@@ -21,7 +25,9 @@
             <div data-cell-index="7" class="game-cell"></div>
             <div data-cell-index="8" class="game-cell"></div>
         </div> 
+        <!--The game restart button with an id tag that is used in the js and css-->
         <button id="game-restart">Restart</button>
+        <!--Links to the JavaScript file-->
         <script src="../JavaScript/tictactoe.js"></script>
     </body>
 </html>
