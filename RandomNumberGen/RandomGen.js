@@ -26,3 +26,35 @@ function startNewGame() {
     submitGuessButton.disabled = false;
     restartButton.style.display = "none";
 }
+
+function checkGuess() {
+    if (!gameActive) {
+        return; 
+    }
+
+    const userGuess = parseInt(guessInput.value);
+
+    if (isNaN(userGuess) || userGuess < minNum || userGuess > maxNum) {
+        messageDisplay.textContent = `Please enter a valid number between ${minNum} and ${maxNum}.`;
+        return;
+    }
+
+    attempts++;
+    attemptsDisplay.textContent = `Attempts: ${attempts}`;
+
+    if (userGuess === randomNumber) {
+        messageDisplay.textContent = `Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts!`;
+        gameActive = false;
+        guessInput.disabled = true;
+        submitGuessButton.disabled = true;
+        restartButton.style.display = 'block'; //restart button shows again
+    } else if (userGuess < randomNumber) {
+        messageDisplay.textContent = 'Too low! Try again.';
+    } else {
+        messageDisplay.textContent = 'Too high! Try again.';
+    }
+
+    guessInput.value = ""; //clears input
+}
+
+submitGuessButton.addEventListener
