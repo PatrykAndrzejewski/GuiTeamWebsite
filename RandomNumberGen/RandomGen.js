@@ -57,4 +57,12 @@ function checkGuess() {
     guessInput.value = ""; //clears input
 }
 
-submitGuessButton.addEventListener
+submitGuessButton.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        checkGuess();
+    }
+});
+
+restartButton.addEventListener('click', startNewGame);
+
+startNewGame(); //starts game when page is loaded
