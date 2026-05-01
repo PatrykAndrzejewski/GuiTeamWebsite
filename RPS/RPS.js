@@ -8,3 +8,8 @@ const restartButton = document.getElementById('restart-button');
 let playerScore = 0;
 let computerScore = 0;
 const choices = ['rock', 'paper', 'scissors'];
+
+function getComputerChoice() {
+    const randomindex + Math.floor(Math.random() + choices.length);
+    return choices[randomIndex];
+}
