@@ -153,3 +153,65 @@ button{
     background-color: aqua;
     color: #222;
 }
+/* Random Number Generator */
+#game-container-random{
+    margin: 20px auto;
+    border: 2px solid #222;
+    border-radius: 10px;
+    background-color: #555;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#message{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+#attempts{
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(162, 239, 241);
+
+}
+#guess-input{
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #222;
+    border-radius: 8px;
+    font-size: 1rem;    
+    text-align: center;
+    background-color: #666;
+    color: white;
+}
+#submit-guess{
+    padding: 10px 30px;
+    background-color: aqua;
+    border: 2px solid #222;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80%;
+}
+#submit-guess-hover{
+    background-color: aquamarine;
+}
+    
+#restart-button {
+    padding: 10px 30px;
+    background-color: #7dd8f0;
+    border: 2px solid #222;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80%;
+}
+
+#restart-button-hover{
+    background-color: #4ec8e8;
+}
