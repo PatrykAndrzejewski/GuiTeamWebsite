@@ -149,4 +149,15 @@ background-color: aquamarine;
 button{
     background-color: aqua;
     color: #222;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: aquamarine;
+
 }
