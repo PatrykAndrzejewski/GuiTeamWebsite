@@ -7,20 +7,27 @@
     </head>
     <body>
         <h1>RockPaperScissors</h1>
+        <!--sets a group for the game container-->
         <div id="game-container">
+            <!--adds a player choice ,computer choice  that uses the id in js-->
             <p id="player-choice"></p>
             <p id="computer-choice"></p>
+            <!--adds the result that the div puls from the js-->
             <p id="result">Make your move!</p>
+            <!--Shows the result for the game thats ongoing before you reset it again also uses the div in js-->
             <p id="score">Score - You: 0 Computer: 0</p>
-
+            
+            <!--adds the three choices for rock paper scissors as buttons and makes them each have there own ids and be part of one class for later js use-->
             <div class="choices">
                 <button id="rock" class="rps-button">Rock</button>
                 <button id="paper" class="rps-button">Paper</button>
                 <button id="scissors" class="rps-button">Scissors</button>
             </div>
 
+            <!--the restart button for the game that uses an id that is used in js to make it work correctly-->
             <button id="restart-button">Restart Game</button>
         </div>
+        <!--Allows the page to connect to the javascript for the page-->
         <script src="../JavaScript/RPS.js"></script>
     </body>
 </html>
