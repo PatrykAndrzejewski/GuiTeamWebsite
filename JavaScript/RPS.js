@@ -1,3 +1,4 @@
+//DOm Elements
 const playerChoiceDisplay = document.getElementById('player-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
@@ -7,16 +8,21 @@ const restartButton = document.getElementById('restart-button');
 
 let playerScore = 0;
 let computerScore = 0;
+// game choices
 const choices = ['rock', 'paper', 'scissors'];
 
+// get the computer's random choice
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
+// figure out who won
 function determineWinner(playerSelection, computerSelection) {
+    // if choices are the same it's a tie
     if (playerSelection === computerSelection) {
         return "It's a tie!"; 
+    // player win conditions
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
@@ -24,12 +30,14 @@ function determineWinner(playerSelection, computerSelection) {
     ) {
         playerScore++;
         return 'You win!';
+    // computer wins
     } else {
         computerScore++;
         return 'Computer wins!';
     }
 }
 
+// update what the user sees
 function updateUI(playerSelection, computerSelection, result) {
     playerChoiceDisplay.textContent = `You chose: ${playerSelection}`;
     computerChoiceDisplay.textContent = `Computer chose: ${computerSelection}`;
@@ -37,6 +45,7 @@ function updateUI(playerSelection, computerSelection, result) {
     scoreDisplay.textContent = `Score - You: ${playerScore} Computer: ${computerScore}`;
 }
 
+// handle a players choice
 function handlePlayerChoice(event) {
     const playerSelection = event.target.id; 
     const computerSelection = getComputerChoice();
@@ -44,6 +53,7 @@ function handlePlayerChoice(event) {
     updateUI(playerSelection, computerSelection, result);
 }
 
+// reset the game
 function restartGame() {
     playerScore = 0;
     computerScore = 0;
@@ -53,13 +63,16 @@ function restartGame() {
     scoreDisplay.textContent = 'Score - You: 0 Computer: 0';
 }
 
+// add click listeners to all choice buttons
 buttons.forEach(button => {
     button.addEventListener('click', handlePlayerChoice);
 });
 
+// add click listener for restart button
 if (restartButton) { 
     restartButton.addEventListener('click', restartGame);
 }
 
+// initial game setup
 resultDisplay.textContent = 'Make your move!';
 scoreDisplay.textContent = 'Score - You: 0 Computer: 0';
