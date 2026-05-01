@@ -29,3 +29,10 @@ function determineWinner(playerSelection, computerSelection) {
         return 'Computer wins!';
     }
 }
+
+function updateUI(playerSelection, computerSelection, result) {
+    playerChoiceDisplay.textContent = 'you chose: ${playerSelection}';
+    computerChoiceDisplay.textContent = 'computer chose: ${computerSelection}';
+    resultDisplay.textContent = result;
+    scoreDisplay.textContent = 'Score - You: ${playerScore} Computer: ${computerScore}';
+}
