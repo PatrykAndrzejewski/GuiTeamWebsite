@@ -8,13 +8,13 @@ let currentPlayer = 'X';
 let gameActive = true;
 
 const winningConditions = [
-    [0, 1, 2], // Rows
+    [0, 1, 2], // rows
     [3, 4, 5],
     [6, 7, 8],
-    [0, 3, 6], // Columns
+    [0, 3, 6], //columns
     [1, 4, 7],
     [2, 5, 8],
-    [0, 4, 8], // Diagonals
+    [0, 4, 8], //diagonals
     [2, 4, 6]
 ];
 
@@ -22,15 +22,15 @@ function handleCellClick(event) {
     const clickedCell = event.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
 
-    // Check if the cell is already played or if the game is over
+    // if cell is full or game is over do nothing
     if (board[clickedCellIndex] !== '' || !gameActive) {
         return;
     }
 
-    // Update state and UI
     board[clickedCellIndex] = currentPlayer;
     clickedCell.textContent = currentPlayer;
 
+    // check if someone won or it's a draw
     checkResult();
 }
 
@@ -58,13 +58,14 @@ function checkResult() {
         return;
     }
 
+    // if no empty cells and no winner it's a draw
     if (!board.includes('')) {
         gameStatus.textContent = "It's a draw!";
         gameActive = false;
         return;
     }
 
-    // Switch players
+    // switch to the next player
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     gameStatus.textContent = `It's ${currentPlayer}'s turn`;
 }
@@ -77,6 +78,6 @@ function restartGame() {
     cells.forEach(cell => cell.textContent = "");
 }
 
-// --- Event Listeners ---
+//Event Listeners
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 restartButton.addEventListener('click', restartGame);
