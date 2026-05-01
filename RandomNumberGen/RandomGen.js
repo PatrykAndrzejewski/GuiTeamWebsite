@@ -57,6 +57,8 @@ function checkGuess() {
     guessInput.value = ""; //clears input
 }
 
+submitGuessButton.addEventListener('click', checkGuess);
+
 submitGuessButton.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         checkGuess();
