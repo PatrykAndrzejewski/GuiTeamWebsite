@@ -19,3 +19,13 @@ function determineWinner(playerSelection, computerSelection) {
         return "It's a tie";
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'paper')
+    ) {
+        playerScore++;
+        return 'You win!';
+    } else {
+        computerScore++;
+        return 'Computer wins!';
+    }
+}
