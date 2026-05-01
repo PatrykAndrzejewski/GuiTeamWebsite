@@ -14,7 +14,7 @@ h1{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
+    color:rgb(162, 239, 241);
     margin-bottom: 24px;
 }
 
@@ -65,7 +65,7 @@ background-color: aquamarine;
     justify-content: center;
     font-size: 4rem;
     font-weight: bold;
-    color: #222;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -74,15 +74,18 @@ background-color: aquamarine;
 {
     background-color: #444;
 }
+h1{
+   text-align: center;
+   color: white;
 
-
-
+}
+  
 #game-status { 
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #222;
+    color: white;
 }
 
 #game-restart
@@ -149,15 +152,4 @@ background-color: aquamarine;
 button{
     background-color: aqua;
     color: #222;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: aquamarine;
-
 }
