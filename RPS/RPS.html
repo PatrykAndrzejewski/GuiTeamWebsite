@@ -2,14 +2,25 @@
 <html lang="en">
     <head>
         <title>RockPaperScissors</title>
-        <meta chaset="UTF-8">
-        <link rel="stylesheet" href="RPS.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../Css/stylesheet.css">
     </head>
     <body>
         <h1>RockPaperScissors</h1>
-        <div id="game-area">
-            <div id="screen"></div>
-            <div id="input"></div>
+        <div id="game-container">
+            <p id="player-choice"></p>
+            <p id="computer-choice"></p>
+            <p id="result">Make your move!</p>
+            <p id="score">Score - You: 0 Computer: 0</p>
+
+            <div class="choices">
+                <button id="rock" class="rps-button">Rock</button>
+                <button id="paper" class="rps-button">Paper</button>
+                <button id="scissors" class="rps-button">Scissors</button>
+            </div>
+
+            <button id="restart-button">Restart Game</button>
         </div>
+        <script src="RPS.js"></script>
     </body>
 </html>
